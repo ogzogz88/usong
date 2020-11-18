@@ -9,7 +9,7 @@ const Track = ({ track }) => {
         <div className="col-md-6">
             <div key={track.track_id} className="card mb-4 shadow-lg rounded">
                 <div className="card-body">
-                    <h5>{track.artist_name}</h5>
+                    <h5 className="text-primary">{track.artist_name}</h5>
                     <p className="card-text">
                         <strong>
                             <FontAwesomeIcon icon={faMusic} />{' '}
