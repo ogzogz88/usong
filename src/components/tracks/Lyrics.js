@@ -13,8 +13,8 @@ class Lyrics extends Component {
         lyrics: {}
     }
     componentDidMount() {
-        const requestTrack = axios.get(`http://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.get?track_id=${this.props.match.params.id}&apikey=${process.env.REACT_APP_MUSIXMATCH_APIKEY}`);
-        const requestLyrics = axios.get(`http://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${this.props.match.params.id}&apikey=${process.env.REACT_APP_MUSIXMATCH_APIKEY}`);
+        const requestTrack = axios.get(`https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.get?track_id=${this.props.match.params.id}&apikey=${process.env.REACT_APP_MUSIXMATCH_APIKEY}`);
+        const requestLyrics = axios.get(`https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${this.props.match.params.id}&apikey=${process.env.REACT_APP_MUSIXMATCH_APIKEY}`);
 
         axios.all([requestTrack, requestLyrics]).then(axios.spread((...responses) => {
             const responseTracks = responses[0];
@@ -77,16 +77,16 @@ class Lyrics extends Component {
                             <strong>Track Rating: </strong>{' '}{track.track_rating}
                         </li>
                         <li className="list-group-item col-sm-4" style={{
-                            "border-top-left-radius": "inherit",
-                            "border-top-right-radius": "inherit",
-                            "border-top-width": "1",
+                            "borderTopLeftRadius": "inherit",
+                            "borderTopRightRadius": "inherit",
+                            "borderTopWidth": "1px",
                         }}>
                             <strong>Track Explicit: </strong>{' '}{track.explicit === 0 ? 'No' : 'Yes'}
                         </li>
                         <li className="list-group-item col-sm-4" style={{
-                            "border-top-left-radius": "inherit",
-                            "border-top-right-radius": "inherit",
-                            "border-top-width": "1",
+                            "borderTopLeftRadius": "inherit",
+                            "borderTopRightRadius": "inherit",
+                            "borderTopWidth": "1px",
 
                         }}>
                             <strong>Release Date: </strong>{' '}{(lyrics.updated_time).substring(0, 4)}
