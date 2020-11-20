@@ -1,3 +1,16 @@
+# Usong : Basic lyrics search application
+
+You can search tracks and see the lyrics.(Due to API restriction, only 30% of the lyrics can be displayed)
+
+## Tech Stack
+
+This project is based on Context API.
+Usong uses Musixmatch API to get the track and lyrics information.
+
+## Live project
+
+It is deployed with surge and live at http://simplistic-powder.surge.sh/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
